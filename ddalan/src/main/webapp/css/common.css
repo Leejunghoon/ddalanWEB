@@ -1,0 +1,19 @@
+body {position: relative; height:auto; width: auto; text-align: center ;padding:2%; margin: 0;}
+
+.logo {left: 0; margin-top:5%; margin-bottom:5%;  absolute; text-align: center; top: 50%; width: 100%; border: 1px dashed; border-color: maroon; border-width: thin; }
+/*  outline-style:dashed; outline-color: maroon; outline-width: medium5%; */
+
+.logo h1{margin-top:12%;}
+.logo h1 img {width: 70%; }
+
+.logo p {}
+.logo p img {width: 50% }
+
+.logo .status {padding-top: 1%;}
+.logo .status img {width: 25%;}
+
+.logo .btn_area {padding:7% 0 7% 0;}
+.logo .btn_area .btn { background-color: gold; border-bottom: 3px solid #ff6699;border-right: 3px solid #ff6699; }
+.logo .btn_area .btn {border-radius: 5px; color: grey; display: inline-block; font-size: 12px; padding: 8px 5% 9px; font-style: inherit;}
+
+.none {display:none;}
