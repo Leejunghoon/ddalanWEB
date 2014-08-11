@@ -9,6 +9,9 @@
 	<script src="/js/index.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="/css/common.css" type="text/css">
 	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	
 	<script type="text/javascript">
 	</script>
 	
@@ -16,11 +19,11 @@
 <body >
    	<div class="logo">
 	   	<h1>
-	   		<img id="logo1" src="/images/logow.png" alt="Logo1" class="none" >
-	   		<img id="logo2" src="/images/logow.png" alt="Logo2" class="none">
-	   		<img id="logo3" src="/images/logow.png" alt="Logo3" class="none">
-	   		<img id="logo4" src="/images/logow.png" alt="Logo4" class="none">
-	   		<img id="logo5" src="/images/logow.png" alt="Logo5" class="none">
+	   		<img id="logo1" src="/images/logos.gif" alt="Logo1" class="none" >
+	   		<img id="logo2" src="/images/logos.gif" alt="Logo2" class="none">
+	   		<img id="logo3" src="/images/logos.gif" alt="Logo3" class="none">
+	   		<img id="logo4" src="/images/logos.gif" alt="Logo4" class="none">
+	   		<img id="logo5" src="/images/logos.gif" alt="Logo5" class="none">
    		</h1>
 	   	<p>
 	   		<img id="info1" src="/images/info1.png" alt="Info1" class="none">
@@ -36,15 +39,16 @@
 	   		<img id="status4" src="/images/status4.png" alt="Status4" class="none">
 	   		<img id="status5" src="/images/status5.png" alt="Status5" class="none">
 	   	</div>
-	   	<div class="btn_area">
-	   		<!-- <input type="button" value="FaceBook으로 연동하기">
-	   		<input type="button" value="주소록으로 연동하기"> -->
-	   		<!-- <button class="red btn" onclick="'">SNS로 연동하기</button>
-	   		<button onclick="'">주소록으로 연동하기</button> -->
-	   		<a href="#none" class="btn"  style="text-decoration: none" onclick="jsMoveUrl('https://www.facebook.com/');">facebook으로 연동</a>
-	   		<a href="#none" class="btn" style="text-decoration: none" onclick="jsMoveUrl('app://application')">주소록 연동</a>
-	   		<!-- <a href="https://www.facebook.com/" class="red btn" target="_blank">주소록으로 연동하기</a> -->
-	   	</div> 
-   	</div>    	
+	  
+	   <div class="btn_area"> 
+	   		<div data-role="fieldcontain">
+	   			<input type="tel" readonly="readonly" "phonenumber" id="phonenumber"/>
+	   		</div> 
+	   </div>
+	   <div class="ui-grid-a">
+	 		<div class="ui-block-a"><img src="/images/join_info.png"></div>
+	   		<div class="ui-block-b"><input type ="submit" onclick="jsMoveUrl('app://application')"value="확인"> </div>
+	   </div>	 
+ </div>  	
 </body>
 </html>

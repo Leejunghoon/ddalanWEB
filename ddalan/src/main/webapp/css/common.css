@@ -1,19 +1,22 @@
-body {position: relative; height:auto; width: auto; text-align: center ;padding:2%; margin: 0;}
+body {position: relative; height:auto; width: auto; text-align: center ;padding:2%; margin: 0; }
 
-.logo {left: 0; margin-top:5%; margin-bottom:5%;  absolute; text-align: center; top: 50%; width: 100%; border: 1px dashed; border-color: maroon; border-width: thin; }
+.logo {left: 0;  margin-top:2%; margin-bottom:1%; border : 50%;  absolute; text-align: center;  top: 50%; width: 97.5%; height:100%; border:1px dashed; border-color :#d8bfd8;
+		 border-width: medium;background-color: #fffff0  ;} /* fff0f5 ºÐÈ«  */
 /*  outline-style:dashed; outline-color: maroon; outline-width: medium5%; */
+/* border-left-color: #ff6699; border-right-color: green; border-top-color: gold; border-bottom-color: purple; */
 
-.logo h1{margin-top:12%;}
-.logo h1 img {width: 70%; }
+.logo h1{margin-top:10%; margin-bottom: -14%;}
+.logo h1 img {margin-top:1%;  width: 70%; }
 
-.logo p {}
-.logo p img {width: 50% }
+.logo p {padding: 0 0 0 0;}
+.logo p img {width: 70% }
 
-.logo .status {padding-top: 1%;}
+.logo .status {margin-top: -12%;}
 .logo .status img {width: 25%;}
 
-.logo .btn_area {padding:7% 0 7% 0;}
-.logo .btn_area .btn { background-color: gold; border-bottom: 3px solid #ff6699;border-right: 3px solid #ff6699; }
-.logo .btn_area .btn {border-radius: 5px; color: grey; display: inline-block; font-size: 12px; padding: 8px 5% 9px; font-style: inherit;}
+.logo .btn_area {padding: 0 10% 0 10%; margin-top: -5%;}
+
+.ui-grid-a .ui-block-a{padding:2% 0 0 0; width: 70% ;margin-top: -7%;}
+.ui-grid-a .ui-block-b{padding:3% 0 0 0; width: 50%; font-size: 6px;padding:2% 10% 0 0; margin-top: -3.5%;}
 
 .none {display:none;}

@@ -7,6 +7,8 @@ $().ready(function(){
 		};
 		
 		
+		
+		
 		var jsChange = function() {
 			
 			var cnt = 1;
@@ -39,4 +41,3 @@ $().ready(function(){
 				cnt++;
 			}
 		};
-				
