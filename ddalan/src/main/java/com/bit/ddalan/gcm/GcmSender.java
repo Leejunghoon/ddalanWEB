@@ -9,13 +9,13 @@ import com.google.android.gcm.server.Sender;
 
 public class GcmSender {
 
-	public void Push() throws IOException{
+	public void Push(String id) throws IOException{
 		
 		Sender sender = new Sender("AIzaSyBdOt8hmu5dNvMj01Fie6rimvsaSnfgaio");  //구글 코드에서 발급받은 서버 키
 		   Message msg = new Message.Builder().addData("title",new String("따란") ).build();  //데이터 추가
 		                                                           
-		   String regId ="APA91bEgsNKxixxTUJ-LxAMPnBF7i7tvAT3ORKD3WlpQFRpBDz28HdZNXXA0y_buPPB10BSA8CvRGIKXt8n660O7FzqnepUX-32k1p8jBhw35ft40EQg-fdrKhusq4yypG8zFmHZvM8Sn3Ul0-jlPcYBbjWcC84H-g";
-		   				  
+		   String regId =id;
+		   
 		   //푸시 전송. 파라미터는 푸시 내용, 보낼 단말의 id, 마지막은 잘 모르겠음 
 		   Result result = sender.send(msg, regId, 5);
 		   

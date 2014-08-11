@@ -1,15 +1,24 @@
 package com.bit.ddalan.domain;
 
 public class UserVO {
-	private String id;
+
+	private String regID;
+	private String email;
 	private String phone;
-	private String name;
-	private String img;
-	public String getId() {
-		return id;
+
+		
+	
+	public String getRegID() {
+		return regID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setRegID(String regID) {
+		this.regID = regID;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPhone() {
 		return phone;
@@ -17,23 +26,14 @@ public class UserVO {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getImg() {
-		return img;
-	}
-	public void setImg(String img) {
-		this.img = img;
-	}
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", phone=" + phone + ", name=" + name
-				+ ", img=" + img + "]";
+		return "UserVO [ regID=" + regID + ", email=" + email
+				+ ", phone=" + phone + "]";
 	}
-
+	
+	
+	
+	
 	
 }

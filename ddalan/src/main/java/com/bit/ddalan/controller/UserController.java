@@ -21,11 +21,26 @@ public class UserController {
 	@Autowired
 	private SqlSession sqlSession;
 
+	
 	@RequestMapping(value = "/addUser", method = {RequestMethod.POST, RequestMethod.GET})
 	public void addUser(@ModelAttribute UserVO userVO) throws IOException {
 		System.out.println("»£√‚µ ");
+		System.out.println(userVO);
 		
-		new GcmSender().Push(); //Gcm Push
+		sqlSession.insert("UserControlMapper.addUser", userVO);
+		System.out.println("∞°¿‘ øœ∑·");
+		
+	}
+	
+	
+	@RequestMapping(value = "/push", method = {RequestMethod.POST, RequestMethod.GET})
+	public void push(@ModelAttribute UserVO userVO) throws IOException {
+		System.out.println("»£√‚µ ");
+		System.out.println(userVO.getRegID());
+		
+		//sqlSession.insert("regIdControlMapper.addUser", userVO.getRegid());
+		
+		new GcmSender().Push(userVO.getRegID()); //Gcm Push
 	}
 	
 }
