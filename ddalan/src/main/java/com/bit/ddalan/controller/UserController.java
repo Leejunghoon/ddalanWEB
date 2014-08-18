@@ -34,8 +34,10 @@ public class UserController {
 	@RequestMapping(value = "/push", method = {RequestMethod.POST, RequestMethod.GET})
 	public void push(@ModelAttribute UserVO userVO) throws IOException {
 		System.out.println("푸쉬 호출");
+	
 		
 		String regId = sqlSession.selectOne("UserControlMapper.push",userVO);
+		
 		
 		new GcmSender().Push(regId); //Gcm Push
 	}
