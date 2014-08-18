@@ -5,9 +5,22 @@ public class UserVO {
 	private String regID;
 	private String email;
 	private String phone;
-
-		
+	private String friendsN = null;
+	private String friendsP;
 	
+
+	public String getFriendsN() {
+		return friendsN;
+	}
+	public void setFriendsN(String friendsN) {
+		this.friendsN = friendsN;
+	}
+	public String getFriendsP() {
+		return friendsP;
+	}
+	public void setFriendsP(String friendsP) {
+		this.friendsP = friendsP;
+	}
 	public String getRegID() {
 		return regID;
 	}

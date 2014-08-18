@@ -42,7 +42,7 @@
 	  
 	   <div class="btn_area"> 
 	   		<div data-role="fieldcontain">
-	   			<input type="tel" readonly="readonly" "phonenumber" id="phonenumber"/>
+	   			<input type="tel"   id="phonenumber" value=""/>
 	   		</div> 
 	   </div>
 	   <div class="ui-grid-a">

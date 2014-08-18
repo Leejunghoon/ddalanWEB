@@ -13,7 +13,7 @@
 					 jndi-name="java:comp/env/jdbc/ddalan"
 					 expected-type="javax.sql.DataSource"/>
 					 
-					 
+ 	<bean id="jsonObjectMapper" class="com.fasterxml.jackson.databind.ObjectMapper" /> 
 		
 		
 	<bean id="sqlSessionFactory"
