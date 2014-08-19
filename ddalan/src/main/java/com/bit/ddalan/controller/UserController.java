@@ -62,6 +62,10 @@ public class UserController {
 		System.out.println("/addFriend 호출");
 		
 		
+		
+		String friend = userVO.getFriendsN();
+		
+		
 	}
 	
 	

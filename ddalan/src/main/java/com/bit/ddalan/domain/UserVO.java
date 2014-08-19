@@ -5,7 +5,7 @@ public class UserVO {
 	private String regID;
 	private String email;
 	private String phone;
-	private String friendsN = null;
+	private String friendsN ;
 	private String friendsP;
 	
 

@@ -3,27 +3,38 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace = "UserControlMapper">
+<mapper namespace="UserControlMapper">
 
 
-<resultMap id="regIdSelect" type="user">
-		<result property="regID" 			column="regID" 			jdbcType="VARCHAR"/>
-		</resultMap>
+	<resultMap id="regIdSelect" type="user">
+		<result property="regID" column="regID" jdbcType="VARCHAR" />
+	</resultMap>
 
 
-	<insert id = "addUser" parameterType="user">
-	
-	insert into users(regID,email,phone) 
-	values(
-			#{regID},
-			#{email},
-			#{phone}	       
-			)
-		
+	<insert id="addUser" parameterType="user">
+
+		insert into users(regID,email,phone)
+		values(
+		#{regID},
+		#{email},
+		#{phone}
+		)
+
 	</insert>
 
 	<select id="push" parameterType="user" resultType="String">
-	
-	select regID from users where phone = #{phone}
+
+		select regID from users where phone = #{phone}
 	</select>
+
+	<insert id="addFriend" parameterType="user">
+		
+		insert into friendlist(no,user_no,name,phone)
+		values(
+		#{no},
+		#{user_no},
+		#{name},
+		#{phone}
+		)
+	</insert>
 </mapper>
