@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.junit.internal.matchers.SubstringMatcher;
 import org.omg.CORBA.NameValuePair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.support.EncodedResource;
@@ -34,12 +35,33 @@ public class UserController {
 	@RequestMapping(value = "/push", method = {RequestMethod.POST, RequestMethod.GET})
 	public void push(@ModelAttribute UserVO userVO) throws IOException {
 		System.out.println("푸쉬 호출");
+		
+		//+82 10-4811-0702 , 010-4811-0702
+		
+		
+		
+		if(!userVO.getPhone().substring(0, 3).equals("010")){
+			String ch = userVO.getPhone().substring(0, 3).trim();
+			String p1 = userVO.getPhone().replace(ch+" ","0").trim();
+			String ph[] = p1.split("-");
+			String phone = ph[0]+ph[1]+ph[2];
+			
+			String regId = sqlSession.selectOne("UserControlMapper.push",phone);
+			new GcmSender().Push(regId);
+		}else if (userVO.getPhone().indexOf("-") == 3){
+			
+			String ph[] = userVO.getPhone().split("-");
+			String phone = ph[0]+ph[1]+ph[2];
+			
+			String regId = sqlSession.selectOne("UserControlMapper.push",phone);
+			new GcmSender().Push(regId);
+			
+		}else{
+			String regId = sqlSession.selectOne("UserControlMapper.push",userVO.getPhone());
+			new GcmSender().Push(regId);
+		}
+		
 	
-		
-		String regId = sqlSession.selectOne("UserControlMapper.push",userVO);
-		
-		
-		new GcmSender().Push(regId); //Gcm Push
 	}
 	
 	@RequestMapping(value = "/addUser", method = {RequestMethod.POST, RequestMethod.GET})
@@ -57,13 +79,23 @@ public class UserController {
 		
 		
 		
-		System.out.println(userVO.getFriendsN());
-		System.out.println(userVO.getFriendsP());
+	
+		String friendsN[] = userVO.getFriendsN().substring(1, userVO.getFriendsN().length() -1).split(", ");
+		String friendsP[] = userVO.getFriendsP().substring(1, userVO.getFriendsP().length() -1).split(", ");
+//		
+//		JSONObject json = new JSONObject();
+//		JSONArray jArray = new JSONArray();
+//		
+//		jArray.add(0, friendsN);
+//		
+//		json.put("fname", jArray);
+//		
+	
+		
 		System.out.println("/addFriend 호출");
 		
 		
-		
-		String friend = userVO.getFriendsN();
+	
 		
 		
 	}
